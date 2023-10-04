@@ -4,6 +4,10 @@ import SignUpForm from './SignUpForm';
 import LoginForm from './LoginForm';
 import AppointmentForm from './AppointmentForm';
 import './index.css';
+import Navbar from './NavBar';
+import SearchBar from './SearchBar';
+import HomePage from './HomePage';
+import SecondPage from './SecondPage';
 
 const Home = () => (
   <div>
@@ -15,16 +19,22 @@ const Home = () => (
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="min-h-screen">
+        <Navbar />
         <Routes>
+          {/* User Authentication Routes */}
           <Route path="/signup" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/appointment" element={<AppointmentForm />} />
-          <Route path="/" element={<Home />} />
+
+          {/* Content Presentation and Navigation Routes */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/second-page" element={<SecondPage />} />
         </Routes>
       </div>
     </Router>
   );
 };
+
 export default App;
 
