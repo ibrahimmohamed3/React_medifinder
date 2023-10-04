@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUpForm from './SignUpForm';
 import LoginForm from './LoginForm';
 import AppointmentForm from './AppointmentForm';
-import './App.css';
+import './index.css';
 
 const Home = () => (
   <div>
