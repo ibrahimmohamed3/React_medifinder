@@ -1,9 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [],
-  theme: {
-    extend: {},
+export const content = [
+  "./src/**/*.{js,jsx,ts,tsx}",
+];
+export const theme = {
+  extend: {
+    colors: {
+      'river-bed': '#555A5B',
+      'footer': '#555A5B',
+      'font':'#87CEEB'
+    },
   },
-  plugins: [],
-}
+};
+export const plugins = [];
 
