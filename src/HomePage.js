@@ -25,7 +25,8 @@ function HomePage() {
 
       </div>
       <div>
-        <h1 className='font-bold text-center underline text-river-bed text-4xl '>OUR SERVICES</h1>
+      <h1 id="our-services" className='font-bold text-center underline text-river-bed text-4xl '>OUR SERVICES</h1>
+
         <div className="grid grid-cols-4 grid-rows-2 gap-x-20 gap-y-12 h-full  bg-background p-4">
             <div className="col-span-1  bg-white p-4 shadow-2xl shadow-cyan-300 text-lg font-semibold">
                 <h1 className='text-2xl font-sans'>HOSPITALS LOCATOR</h1>

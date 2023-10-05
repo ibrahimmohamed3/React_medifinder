@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from './Footer'
 
 
 const AppointmentForm = () => {
@@ -73,7 +74,10 @@ const AppointmentForm = () => {
                 </div>
                 <button type="submit">Book Appointment</button>
             </form>
+            
+            
         </div>
+        
     );
 };
 
