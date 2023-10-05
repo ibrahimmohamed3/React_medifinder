@@ -1,7 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 const Services = () => {
+    const serviceTitleStyle = {
+      fontFamily: 'Arial, sans-serif', // Set your desired font family here
+      fontWeight: 'bold',
+      fontSize: '3rem', // Set your desired font size here
+      textAlign: 'center',
+      textDecoration: 'underline',
+      marginBottom: '2rem',
+    };
+  
+    const serviceItemStyle = {
+      fontFamily: 'Arial, sans-serif', // Set your desired font family here
+      fontSize: '1.5rem', // Set your desired font size here
+      marginBottom: '1rem',
+    };
+
+
+
   return (
     <div id="our-services" className='font-bold text-center underline text-river-bed text-4xl'>
       OUR SERVICES
