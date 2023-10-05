@@ -15,7 +15,7 @@ function HomePage() {
         <div className="relative">
             <img src={img1} alt="Homepage" />
 
-                <Link to="/second-page">
+                <Link to="/appointment">
                     {/* Link to the SecondPage component */}
                     <button className="absolute top-0 right-0 mt-4 mr-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     BOOK AN APPOINTMENT
