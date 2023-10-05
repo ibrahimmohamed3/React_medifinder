@@ -8,6 +8,7 @@ import Navbar from './NavBar';
 import SearchBar from './SearchBar';
 import HomePage from './HomePage';
 import SecondPage from './SecondPage';
+import Services from './Services';
 
 const Home = () => (
   <div>
@@ -30,6 +31,7 @@ const App = () => {
           {/* Content Presentation and Navigation Routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/second-page" element={<SecondPage />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </div>
     </Router>

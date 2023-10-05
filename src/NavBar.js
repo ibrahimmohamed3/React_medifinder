@@ -13,9 +13,9 @@ function Navbar() {
           <Link to="/" className="text-black pr-30">
             Home
           </Link>
-          <Link to="/about" className="text-black">
+          {/* <Link to="/about" className="text-black">
             About
-          </Link>
+          </Link> */}
           <Link to="/services" className="text-black">
             <a href="#our-services" className="text-black">
               Services

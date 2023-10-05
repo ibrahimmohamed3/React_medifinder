@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Use useNavigate hook
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -21,14 +22,17 @@ const LoginForm = () => {
     // Reset the form after processing
     setUsername('');
     setPassword('');
+    // Redirect to home page after successful login
+    navigate('/'); // Use navigate to redirect
+    alert('Login Successful'); // Display an alert
   };
 
   return (
-    <div  className="login-container">
-     <h1>Medi<br></br>Finder</h1>
-      <form className = "form2"onSubmit={handleFormSubmit}>
+    <div className="login-container">
+      <h1>Medi<br />Finder</h1>
+      <form className="form2" onSubmit={handleFormSubmit}>
         <div>
-        <h2>WELCOME BACK!</h2>
+          <h2>WELCOME BACK!</h2>
           <input
             type="text"
             id="username"
@@ -50,8 +54,8 @@ const LoginForm = () => {
         </div>
         <button type="submit">Login</button>
         <p>
-        Don't have an Account? <Link to="/signup">Signup</Link>
-      </p>
+          Don't have an Account? <Link to="/signup">Signup</Link>
+        </p>
       </form>
     </div>
   );
