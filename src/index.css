@@ -1,3 +1,7 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
 .form1{ 
   max-width: 600px;
   padding: 0px;
@@ -22,16 +26,17 @@
 
 /* Base styles */
 h1 {
-  font-size: 40px; 
+  font-size: 35px; 
   white-space: pre-line;
+  text-align: center;
   
 }
 
-h1::first-letter {
+/* h1::first-letter {
   color: skyblue;
   font-size: 1.5em; 
   display: block;
-}
+} */
 
 h2 {
   text-align: center;

@@ -20,14 +20,13 @@ function HomePage() {
       <div className="grid grid-cols-2 gap-1">
         <div className='font-bold text-9xl' style={headingStyle}>
           <h1>
-            Find <span className='text-font'>Clinics</span> <br></br><span className='text-centre'>and</span><br></br> <span className='text-font'>Medical Centres</span> <span>Online</span>
+            Find <span className='text-font'>Clinics</span> <br></br> <span className='text-centre'>and</span><br></br> <span className='text-font'>Hospitals<br></br>   </span> <span>Online</span>
           </h1>
         </div>
         <div className="relative">
             <img src={img1} alt="Homepage" />
 
             <Link to="/hospitals">
-              {/* Link to the SecondPage component */}
               <button className="absolute top-0 right-0 mt-4 mr-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 BOOK AN APPOINTMENT
               </button>

@@ -28,7 +28,7 @@ const HospitalList = () => {
 
   return (
     <div className="hospital-list-container">
-      <h2 className='hos'>Hospital List</h2>
+      <h2 className='hos'>Hospitals Near You</h2>
       <input
         type="text2"
         placeholder="Search hospitals"
