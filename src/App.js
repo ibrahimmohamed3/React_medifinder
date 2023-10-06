@@ -27,12 +27,10 @@ const App = () => {
         <Navbar />
        
         <Routes>
-          {/* User Authentication Routes */}
           <Route path="/signup" element={<SignUpForm />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/appointment" element={<AppointmentForm />} />
 
-          {/* Content Presentation and Navigation Routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/second-page" element={<SecondPage />} />
           <Route path="/services" element={<Services />} />

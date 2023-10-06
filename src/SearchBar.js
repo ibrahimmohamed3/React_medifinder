@@ -40,7 +40,6 @@ function SearchBar() {
         hospital.location.toLowerCase().includes(searchInput.toLowerCase())
       );
   
-      // Update the hospitalData state with the filtered results
       setHospitalData(filteredHospitals);
     }
   }

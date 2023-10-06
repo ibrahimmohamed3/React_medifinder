@@ -6,11 +6,11 @@ function Navbar() {
     fontFamily: 'Times New Roman, serif',
     textDecoration: 'none',
     color: 'black',
-    transition: 'color 0.3s ease', // Adding transition for smooth color change
+    transition: 'color 0.3s ease', 
   };
 
   const hoverStyle = {
-    color: 'blue', // Setting the hover color to blue
+    color: 'blue',
   };
 
   return (
@@ -24,9 +24,6 @@ function Navbar() {
           <Link to="/" style={linkStyle}>
             Home
           </Link>
-          {/* <Link to="/about" style={linkStyle}>
-            About
-          </Link> */}
           <Link to="/services" style={linkStyle}>
             <a href="#our-services" style={linkStyle}>
               Services

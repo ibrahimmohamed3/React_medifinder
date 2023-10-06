@@ -5,7 +5,7 @@ const Services = () => {
     fontWeight: '',
     fontSize: '2rem',
     textAlign: 'center',
-    textDecoration: 'none', // Remove underline from titles
+    textDecoration: 'none', 
     marginBottom: '2rem',
   };
 
@@ -13,7 +13,7 @@ const Services = () => {
     fontFamily: 'Arial, sans-serif',
     fontSize: '1rem',
     marginBottom: '1rem',
-    textDecoration: 'none', // Remove underline from items
+    textDecoration: 'none',
   };
 
 

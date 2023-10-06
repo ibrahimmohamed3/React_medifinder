@@ -18,7 +18,6 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
-      // Fetch user data from the specified URL
       const response = await fetch('https://fake-server-jhcl.onrender.com/users');
       if (!response.ok) {
         throw new Error('Failed to fetch user data');
@@ -29,10 +28,8 @@ const LoginForm = () => {
 
       if (user) {
         console.log('Login successful');
-        // Reset the form after processing
         setUsername('');
         setPassword('');
-        // Redirect to home page after successful login
         navigate('/');
         alert('Login Successful');
       } else {
