@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Footer from './Footer'
-
 
 const AppointmentForm = () => {
     const [formData, setFormData] = useState({
@@ -18,16 +16,41 @@ const AppointmentForm = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // You can handle form submission logic here, for example, sending the data to an API.
-        console.log(formData);
+
+        try {
+            const response = await fetch('https://medifinder-db.onrender.com/create_patient', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                console.log('Appointment booked successfully:', formData);
+                alert('Appointment booked successfully!');
+                setFormData({
+                    yourname:'',
+                    email:'',
+                    phone:'',
+                    date:''
+                })
+            } else {
+                console.error('Failed to book appointment:', response.status);
+                alert('Failed to book appointment. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error booking appointment:', error);
+            alert('An error occurred while booking the appointment. Please try again.');
+        }
     };
 
     return (
         <div className="appointment-page">
             <form className="form-container" onSubmit={handleSubmit}>
-                <h2>Book Appointment</h2>
+                <h2 className='bk-btn'>Book Appointment</h2>
                 <div className="form-group">
                     <label htmlFor="yourname">Your Name:</label>
                     <input
@@ -74,10 +97,7 @@ const AppointmentForm = () => {
                 </div>
                 <button type="submit">Book Appointment</button>
             </form>
-            
-            
         </div>
-        
     );
 };
 

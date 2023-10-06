@@ -1,24 +1,25 @@
 import React from 'react';
 const Services = () => {
-    const serviceTitleStyle = {
-      fontFamily: 'Arial, sans-serif', // Set your desired font family here
-      fontWeight: 'bold',
-      fontSize: '3rem', // Set your desired font size here
-      textAlign: 'center',
-      textDecoration: 'underline',
-      marginBottom: '2rem',
-    };
-  
-    const serviceItemStyle = {
-      fontFamily: 'Arial, sans-serif', // Set your desired font family here
-      fontSize: '1.5rem', // Set your desired font size here
-      marginBottom: '1rem',
-    };
+  const serviceTitleStyle = {
+    fontFamily: 'Arial, sans-serif',
+    fontWeight: '',
+    fontSize: '2rem',
+    textAlign: 'center',
+    textDecoration: 'none', // Remove underline from titles
+    marginBottom: '2rem',
+  };
+
+  const serviceItemStyle = {
+    fontFamily: 'Arial, sans-serif',
+    fontSize: '1rem',
+    marginBottom: '1rem',
+    textDecoration: 'none', // Remove underline from items
+  };
 
 
 
   return (
-    <div id="our-services" className='font-bold text-center underline text-river-bed text-4xl'>
+    <div id="our-services" className=' text-center underline text-river-bed text-4xl'>
       OUR SERVICES
       <div className="grid grid-cols-4 grid-rows-2 gap-x-20 gap-y-12 h-full bg-background p-4">
         <div className="col-span-1 bg-white p-4 shadow-2xl shadow-cyan-300 text-lg font-semibold">

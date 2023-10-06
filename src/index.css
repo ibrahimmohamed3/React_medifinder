@@ -115,7 +115,7 @@ button[type="submit"]:hover {
 
 /* AppointmentForm.css */
 .appointment-page {
-  background-color: rgba(135, 189, 216, 0.29); /* Blue background color */
+  background-color: rgba(135, 189, 216, 0.29);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -129,6 +129,67 @@ button[type="submit"]:hover {
 
 button[type="submit"]:hover {
   background-color: #007bff; 
+}
+
+.hospital-list {
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 2px 2px 2px #20a4d8;
+}
+
+
+
+
+.hos {
+  font-size: 45px;
+  font-family: 'Times New Roman', Times, serif; 
+}
+.bk-btn{
+  font-size: 45px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.wel{
+  font-size: 45px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.book-appointment-button {
+  background-color: #87ceeb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.book-appointment-button:hover {
+  background-color:#46575e;
+  text-align: center;
+}
+input[type="text2"] {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @import "tailwindcss/base";

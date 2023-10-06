@@ -20,14 +20,31 @@ const SignUpForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle sign up logic here (e.g., send form data to the server)
-    console.log('Form submitted:', formData);
-    // Show an alert to indicate successful signup
-    window.alert('Account created successfully! You can now log in.');
-    // Redirect to the login page after successful signup
-    navigate('/login');
+
+    try {
+      const response = await fetch('https://fake-server-jhcl.onrender.com/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted:', formData);
+        window.alert('Account created successfully! You can now log in.');
+        navigate('/');
+      } else {
+        const errorData = await response.json();
+        console.error('Error creating account:', errorData);
+        window.alert('Failed to create account. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error creating account:', error);
+      window.alert('An error occurred. Please try again later.');
+    }
   };
 
   return (

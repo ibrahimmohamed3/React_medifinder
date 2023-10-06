@@ -1,6 +1,5 @@
 import React from 'react';
 import img1 from './images/homepage1.jpg.jpg';
-import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
@@ -27,7 +26,7 @@ function HomePage() {
         <div className="relative">
             <img src={img1} alt="Homepage" />
 
-            <Link to="/second-page">
+            <Link to="/hospitals">
               {/* Link to the SecondPage component */}
               <button className="absolute top-0 right-0 mt-4 mr-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 BOOK AN APPOINTMENT

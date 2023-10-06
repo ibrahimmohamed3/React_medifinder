@@ -20,7 +20,7 @@ function Navbar() {
           <span className="text-sky-500 text-4xl">M</span>edi<br />Finder
         </Link>
 
-        <div className="space-x-4 mr-5 text-4xl font-sans font-semibold">
+        <div className="space-x-4 mr-5 text-1.3xl  font-semibold" style={{ fontFamily: 'cursive', fontSize: '1.3rem' }}>
           <Link to="/" style={linkStyle}>
             Home
           </Link>
@@ -32,9 +32,13 @@ function Navbar() {
               Services
             </a>
           </Link>
+          <Link to="/hospitals" style={linkStyle}>
+            Hospitals
+          </Link>
           <Link to="/login" style={linkStyle}>
             Login
           </Link>
+          
         </div>
       </div>
     </nav>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Use useNavigate hook
+  const navigate = useNavigate();
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -14,17 +14,35 @@ const LoginForm = () => {
     setPassword(e.target.value);
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // Perform login logic here, for example, send a login request to the server
-    console.log('Username:', username);
-    console.log('Password:', password);
-    // Reset the form after processing
-    setUsername('');
-    setPassword('');
-    // Redirect to home page after successful login
-    navigate('/'); // Use navigate to redirect
-    alert('Login Successful'); // Display an alert
+
+    try {
+      // Fetch user data from the specified URL
+      const response = await fetch('https://fake-server-jhcl.onrender.com/users');
+      if (!response.ok) {
+        throw new Error('Failed to fetch user data');
+      }
+
+      const users = await response.json();
+      const user = users.find(u => u.username === username && u.password === password);
+
+      if (user) {
+        console.log('Login successful');
+        // Reset the form after processing
+        setUsername('');
+        setPassword('');
+        // Redirect to home page after successful login
+        navigate('/');
+        alert('Login Successful');
+      } else {
+        console.log('Login failed');
+        alert('Invalid username or password.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred during the login. Please try again later.');
+    }
   };
 
   return (
