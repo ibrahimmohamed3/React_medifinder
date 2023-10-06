@@ -9,6 +9,9 @@ import SearchBar from './SearchBar';
 import HomePage from './HomePage';
 import SecondPage from './SecondPage';
 import Services from './Services';
+import HospitalList from './HospitalList';
+import Footer from './Footer';
+
 
 const Home = () => (
   <div>
@@ -22,6 +25,7 @@ const App = () => {
     <Router>
       <div className="min-h-screen">
         <Navbar />
+       
         <Routes>
           {/* User Authentication Routes */}
           <Route path="/signup" element={<SignUpForm />} />
@@ -32,11 +36,13 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/second-page" element={<SecondPage />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/hospitals" element={<HospitalList />} />
+          
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );
 };
 
 export default App;
-

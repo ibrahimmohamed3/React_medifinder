@@ -10,7 +10,7 @@ function SearchBar() {
     setLoading(true);
     setError(null);
 
-    fetch(`http://localhost:5500/Hospitals?location=${searchInput}`)
+    fetch('https://medifinder-db.onrender.com/hospitals')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

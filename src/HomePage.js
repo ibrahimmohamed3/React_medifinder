@@ -43,9 +43,6 @@ function HomePage() {
         <div className="grid grid-cols-4 grid-rows-2 gap-x-20 gap-y-12 h-full  bg-background p-4">
           {/* Service elements go here */}
         </div>
-        <div>
-          <Footer />
-        </div>
       </div>
     </section>
   );
